@@ -4,18 +4,15 @@ class Scissors < Element
     case element.name
 
     when self.name
-      return "#{element.name} equals #{self.name}"
-    
+      return "#{element.name} equals #{self.name}, Tie"
     when 'Lizard'
-      return "#{self.name} decapitates #{element.name}"
-
+      return "#{self.name} decapitates #{element.name}, Win"
     when 'Paper' 
-      return "#{self.name} cut #{element.name}"
-
+      return "#{self.name} cut #{element.name}, Win"
     when 'Rock'
-      return "#{element.name} crushes #{self.name}"
+      return "#{element.name} crushes #{self.name}, Lose"
     when 'Spock'
-      return "#{element.name} smashes #{self.name}"
+      return "#{element.name} smashes #{self.name}, Lose"
     else
       fail 'error comparing elements!'
   end
