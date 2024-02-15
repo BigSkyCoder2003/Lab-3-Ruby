@@ -4,18 +4,18 @@ class Spock < Element
     case element.name
       
     when self.name
-      return "#{element.name} equals #{self.name}"
+      return "#{element.name} equals #{self.name}, Tie"
     
     when 'Lizard'
-      return "#{element.name} poisons #{self.name}"
+      return "#{element.name} poisons #{self.name}, Lose"
 
     when 'Paper' 
-      return "#{element.name} disproves #{self.name}"
+      return "#{element.name} disproves #{self.name}, Lose"
 
     when 'Rock'
-      return "#{self.name} vaporizes #{element.name}"
+      return "#{self.name} vaporizes #{element.name}, Win"
     when 'Scissors'
-      return "#{self.name} smashes #{element.name}"
+      return "#{self.name} smashes #{element.name}, Win"
     else
       fail 'error comparing elements!'
   end
