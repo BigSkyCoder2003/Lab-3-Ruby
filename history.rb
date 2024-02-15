@@ -1,4 +1,3 @@
-require_relative 'element.rb'
 class History
   attr_accessor :play
   attr_accessor :opponent_plays
