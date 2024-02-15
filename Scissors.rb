@@ -6,7 +6,7 @@ class Scissors < Element
     when self.name
       return "#{element.name} equals #{self.name}, Tie"
     when 'Lizard'
-      return "#{self.name} decapitates #{element.name}, Win"
+      return "#{self.name} decapitate #{element.name}, Win"
     when 'Paper' 
       return "#{self.name} cut #{element.name}, Win"
     when 'Rock'
