@@ -15,15 +15,15 @@ class Lizard < Element
     case element.name
 
     when self.name
-      return "#{element.name} equals #{self.name}, Tie"
+      return "#{element.name} equals #{self.name}","Tie"
     when 'Spock'
-      return "#{self.name} poisons #{element.name}, Win"
+      return "#{self.name} poisons #{element.name}","Win"
     when 'Paper' 
-      return "#{self.name} eats #{element.name}, Win"
+      return "#{self.name} eats #{element.name}","Win"
     when 'Rock'
-      return "#{element.name} crushes #{self.name}, Lose"
+      return "#{element.name} crushes #{self.name}","Lose"
     when 'Scissors'
-      return "#{element.name} decapitate #{self.name}, Lose"
+      return "#{element.name} decapitate #{self.name}","Lose"
     else
       fail 'error comparing elements!'
   end
@@ -35,15 +35,15 @@ class Paper < Element
     case element.name
 
     when self.name
-      return "#{element.name} equals #{self.name}, Tie"
+      return "#{element.name} equals #{self.name}","Tie"
     when 'Lizard'
-      return "#{element.name} eats #{self.name}, Lose"
+      return "#{element.name} eats #{self.name}","Lose"
     when 'Spock' 
-      return "#{self.name} disproves #{element.name}, Win"
+      return "#{self.name} disproves #{element.name}","Win"
     when 'Rock'
-      return "#{self.name} covers #{element.name}, Win"
+      return "#{self.name} covers #{element.name}","Win"
     when 'Scissors'
-      return "#{element.name} cut #{self.name}, Lose"
+      return "#{element.name} cut #{self.name}","Lose"
     else
       fail 'error comparing elements!'
   end
@@ -55,15 +55,15 @@ class Rock < Element
     case element.name
 
     when self.name
-      return "#{element.name} equals #{self.name}, Tie"
+      return "#{element.name} equals #{self.name}","Tie"
     when 'Lizard'
-      return "#{self.name} crushes #{element.name}, Win"
+      return "#{self.name} crushes #{element.name}","Win"
     when 'Paper' 
-      return "#{element.name} covers #{self.name}, Lose"
+      return "#{element.name} covers #{self.name}","Lose"
     when 'Spock'
-      return "#{element.name} vaporizes #{self.name}, Lose"
+      return "#{element.name} vaporizes #{self.name}","Lose"
     when 'Scissors'
-      return "#{self.name} crushes #{element.name}, Win"
+      return "#{self.name} crushes #{element.name}","Win"
     else
       fail 'error comparing elements!'
   end
@@ -75,15 +75,15 @@ class Scissors < Element
     case element.name
 
     when self.name
-      return "#{element.name} equals #{self.name}, Tie"
+      return "#{element.name} equals #{self.name}","Tie"
     when 'Lizard'
-      return "#{self.name} decapitate #{element.name}, Win"
+      return "#{self.name} decapitate #{element.name}","Win"
     when 'Paper' 
-      return "#{self.name} cut #{element.name}, Win"
+      return "#{self.name} cut #{element.name}","Win"
     when 'Rock'
-      return "#{element.name} crushes #{self.name}, Lose"
+      return "#{element.name} crushes #{self.name}","Lose"
     when 'Spock'
-      return "#{element.name} smashes #{self.name}, Lose"
+      return "#{element.name} smashes #{self.name}","Lose"
     else
       fail 'error comparing elements!'
   end
@@ -95,15 +95,15 @@ class Spock < Element
     case element.name
 
     when self.name
-      return "#{element.name} equals #{self.name}, Tie"
+      return "#{element.name} equals #{self.name}","Tie"
     when 'Lizard'
-      return "#{element.name} poisons #{self.name}, Lose"
+      return "#{element.name} poisons #{self.name}","Lose"
     when 'Paper' 
-      return "#{element.name} disproves #{self.name}, Lose"
+      return "#{element.name} disproves #{self.name}","Lose"
     when 'Rock'
-      return "#{self.name} vaporizes #{element.name}, Win"
+      return "#{self.name} vaporizes #{element.name}","Win"
     when 'Scissors'
-      return "#{self.name} smashes #{element.name}, Win"
+      return "#{self.name} smashes #{element.name}","Win"
     else
       fail 'error comparing elements!'
   end
@@ -117,8 +117,8 @@ end
 
 $moves = [Rock.new('Rock'), Paper.new('Paper'),Scissors.new('Scissors'),Lizard.new('Lizard'),Spock.new('Spock')]
 
-rock  = Rock.new('Rock')
-paper = Paper.new('Paper')
-puts rock.compare_to(paper)
-puts paper.compare_to(rock)
-puts rock.compare_to(rock)
+# rock  = Rock.new('Rock')
+# paper = Paper.new('Paper')
+# puts rock.compare_to(paper)
+# puts paper.compare_to(rock)
+# puts rock.compare_to(rock)

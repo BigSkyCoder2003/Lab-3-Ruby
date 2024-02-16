@@ -5,19 +5,19 @@ class History
 
   def initialize
     @score = 0 
-    opponent_plays = Array.new
-    play = Array.new
+    @opponent_plays = Array.new
+    @play = Array.new
   end
 
-  log_play(move)
-  play.push(move)
-end
+  def log_play(move)
+    @play.push(move)
+  end
 
-log_opponent_play(move)
-opponent_plays.push(move)
-end
+  def log_opponent_play(move)
+    @opponent_plays.push(move)
+  end
 
-add_score()
-score+=1
-end
+  def add_score()
+    @score += 1
+  end
 end
