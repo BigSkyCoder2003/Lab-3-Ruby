@@ -31,9 +31,9 @@ end
 
 def setup()
   valid_choices = false
-  while valid_choices == false
     puts("Please choose two players:")
     puts("(1) StupidBot\n(2) RandomBot\n(3) IterativeBot\n(4) LastPlayBot\n(5) Human")
+    while valid_choices == false
     print "Select player 1:"
   $stdout.flush
   player1_selector = gets.strip.chomp
@@ -46,7 +46,7 @@ def setup()
       valid_choices=true
       puts("#{$player1.name} vs. #{$player2.name}\n\n")
     else
-      puts "Invalid choice(s) - start over\n"
+      puts "Invalid choice(s) - start over\n\n"
     end
   end
 end
